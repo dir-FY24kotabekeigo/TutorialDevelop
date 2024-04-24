@@ -20,6 +20,10 @@ public class UserService {
         return userRepository.findAll();
     }
 
+    /** Userを1件検索して返す */
+    public User getUser(Integer id) {
+        return userRepository.findById(id).get();
+    }
     // ----- 追加:ここから -----
     /** Userの登録を行う */
     @Transactional
